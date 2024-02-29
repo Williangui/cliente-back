@@ -1,0 +1,11 @@
+br.com.willian.clientes
+br.com.willian.clientes.controller
+br.com.willian.clientes.exception
+br.com.willian.clientes.exception.config
+br.com.willian.clientes.exception.error
+br.com.willian.clientes.exception.mensagem
+br.com.willian.clientes.model
+br.com.willian.clientes.model.dto
+br.com.willian.clientes.repository
+br.com.willian.clientes.service
+br.com.willian.clientes.util

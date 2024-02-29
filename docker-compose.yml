@@ -1,0 +1,27 @@
+version: '3.8'
+
+services:
+  clientes-db:
+    image: postgres
+    ports:
+      - "5432:5432"
+    environment:
+      POSTGRES_USER: willian
+      POSTGRES_PASSWORD: 4ynJm9cM
+      POSTGRES_DB: clientesdb
+    volumes:
+      - clientes-db:/var/lib/postgres
+
+  clientes-app:
+    build: .
+    ports:
+      - "8080:8080"
+    depends_on:
+      - clientes-db
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:postgresql://clientes-db:5432/clientesdb
+      SPRING_DATASOURCE_USERNAME: willian
+      SPRING_DATASOURCE_PASSWORD: 4ynJm9cM
+
+volumes:
+  clientes-db:
